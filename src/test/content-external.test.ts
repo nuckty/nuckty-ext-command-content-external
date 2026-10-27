@@ -17,7 +17,7 @@ import path from 'node:path';
 import fs from 'node:fs';
 import { getRepoName, planRepos, runPlan, type GitRunner, type RepoStatus } from '../content-external.js';
 import { register } from '../index.js';
-import type { CommandArgs, CommandHandler, CommandOptions, NucktyEnv } from 'nuckty';
+import type { CommandArgs, CommandHandler, CommandOptions, NucktyEnv } from '@nuckty/core';
 
 test('content-external validates arguments before reading config', async (t) => {
     let handler: CommandHandler | undefined;

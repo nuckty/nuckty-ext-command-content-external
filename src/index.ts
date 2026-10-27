@@ -1,5 +1,5 @@
 /**
- * nuckty-ext-command-content-external — `nuckty content-external` command-extension.
+ * @nuckty/ext-command-content-external — `nuckty content-external` command-extension.
  *
  * Registers the `content-external` CLI command: clone or update the external git
  * repositories listed in `config/external.json` into `external/<repo>/`. This is
@@ -9,13 +9,13 @@
  * timestamps. Offline builds require prepared inputs and extensions that do
  * not access the network.
  *
- * @module nuckty-ext-command-content-external
+ * @module @nuckty/ext-command-content-external
  */
 
 import path from 'node:path';
 import fs from 'node:fs';
 import process from 'node:process';
-import type { NucktyEnv, CommandArgs } from 'nuckty';
+import type { NucktyEnv, CommandArgs } from '@nuckty/core';
 
 /** `nuckty content-external [--dry-run]` — clone or update external content repos. */
 async function contentExternal(args: CommandArgs): Promise<number> {
@@ -99,4 +99,3 @@ export function register(env: NucktyEnv): void {
 }
 
 export default register;
-

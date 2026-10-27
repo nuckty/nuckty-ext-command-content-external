@@ -1,4 +1,4 @@
-# nuckty-ext-command-content-external
+# @nuckty/ext-command-content-external
 
 > **Populate the content root from external Git repositories — the `content-external` command.**
 
@@ -27,7 +27,6 @@ nuckty content-external [--dry-run]
 
 The build reads Markdown from configured content levels. It does not clone or fetch automatically; Git may also supply modification metadata. Offline and reproducible operation requires prepared files, fixed tool versions, and extensions that do not access the network.
 
-Run `npx nuckty content-external` from the site root where the package is installed and listed in `ext`. `--dry-run` uses local Git checks but does not fetch, clone, or write.
+Run `npx @nuckty/core content-external` from the site root where the package is installed and listed in `ext`. `--dry-run` uses local Git checks but does not fetch, clone, or write.
 
 The command accepts no target name and reads only the global `config/external.json`. A missing file or an empty array succeeds without preparing repositories. With separate target `configDir` values, keep their lists consistent with the global file.
-
